@@ -1,8 +1,8 @@
 angular
       .module('loginExample', [])
-      .controller("LoginController", controladorPrincipal);
+      .controller("LoginController", postForm);
 
-    function controladorPrincipal(){
+    function postForm(){
       //esta función es mi controlador
       var scope = this;
       scope.total = 0;
@@ -15,6 +15,8 @@ angular
         scope.total -= parseInt(scope.cuanto);
       }
       scope.inicio = function(){
+       alert("Hola " + scope.username + ", Bienvenido! ");
         window.location.href = 'index.html';
       }
+      
     };
